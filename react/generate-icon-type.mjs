@@ -21,12 +21,13 @@ if (!fs.existsSync(outputDir)) {
 // Read all .svg files from the folder
 const iconFiles = fs.readdirSync(iconsFolder).filter((file) => file.endsWith(".svg"));
 
-// Generate the TypeScript union type and runtime array
+// Generate the TypeScript union type and runtime array, the latter only for demo purposes
 const iconTypeContent = `
 export type IconType = ${iconFiles
     .map((file) => `"${file.replace(".svg", "")}"`) // Convert filenames to string literals
     .join(" | ")};
 
+// for demo purposes
 export const iconNames: IconType[] = [
 ${iconFiles.map((file) => `  "${file.replace(".svg", "")}"`).join(",\n")}
 ];
