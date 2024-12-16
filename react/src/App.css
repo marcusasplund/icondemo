@@ -1,0 +1,48 @@
+#root {
+    width: 100vw;
+}
+.page {
+    padding: 10px;
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.box {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 16px;
+    color: #333;
+}
+
+.pagination {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
